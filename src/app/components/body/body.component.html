@@ -1,0 +1,33 @@
+<div class="container body-container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class = "menu">
+                <img class="fill-available" src = "../../assets/menu.png">
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="container fit-width">
+                <div class="row">
+                    <order-grid>
+                        <order-input (submit)="submitListener($event)"></order-input>
+                    </order-grid>
+                </div>
+
+                <div class="row">
+                    <order-grid class="mt-5">
+                        <order-input *ngFor="let order of orderList" [orderValue]="order"  (submit)="submitListener($event)" inputType="VIEW_ONLY"></order-input>
+
+                        <div class="row text-center">
+                            Total Regular Bill: {{totalRegularBill}}
+                        </div>
+
+                        <div class="row text-center">
+                            Total Discounted Bill: {{totalDiscountedBill}}
+                        </div>
+                    </order-grid>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

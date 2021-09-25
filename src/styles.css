@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+.fit-width {
+	width: -webkit-fill-available;
+}
+
+.fill-available {
+	width: -webkit-fill-available;
+}
+
+.mt-5 {
+	margin-top: 5px;
+}
+
+.center-items {
+	display: flex;
+	justify-content: center;
+}

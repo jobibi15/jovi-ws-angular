@@ -1,0 +1,32 @@
+.navbar-inverse {
+    background-color: black !important;
+    border-color: #080808;
+    min-height: 50px;
+    padding-left: 5px;
+}
+
+.navbar{
+    background-color:#030375;
+    border-radius: 0;
+    margin : 0;
+    padding-top: 2px;
+    text-align: center;
+    min-height: 25px;
+}
+
+.errorBar{
+    background-color:#ff0000;
+    border-radius: 0;
+    margin : 0;
+    padding-top: 2px;
+    text-align: center;
+    min-height: 25px;
+}
+
+.title{
+    color:white;
+    font-size:  13px;
+    font-family: Arial black;
+    font-weight: bold;
+    cursor: pointer;
+}
