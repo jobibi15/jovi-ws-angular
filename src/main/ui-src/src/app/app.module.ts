@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentModule } from './components/components.module';
 import { HttpClientModule } from '@angular/common/http';
-import { NgEventBus } from 'ng-event-bus';
+import { NgEventBusWrapper } from './components/ngEventBusWrapper.component';
 import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
-import { EventBusMethods } from './EventBusMethods.component';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,11 +20,12 @@ import { EventBusMethods } from './EventBusMethods.component';
     BrowserModule,
     AppRoutingModule,
     ComponentModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxSpinnerModule,
+    BrowserAnimationsModule
   ],
   providers: [
-    NgEventBus,
-    EventBusMethods
+    NgEventBusWrapper
   ],
   bootstrap: [AppComponent]
 })

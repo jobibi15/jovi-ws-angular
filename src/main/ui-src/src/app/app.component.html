@@ -7,7 +7,9 @@
     <span class="title">5% DISCOUNT ON ALL ESPRESSO BAR DRINKS!!! BUY NOW</span>
 </nav>
 
-<div class="nav errorBar" *ngIf="!!errorMessage">
-    <span class="title">{{errorMessage}}</span>
+<div class="nav messageBar" [class.errorBar]="isError" *ngIf="!!message">
+    <span class="title">{{message}}</span>
+    <div class="removeBtn" (click)="clearMessage()" *ngIf="showRemoveBtn">&#10006;</div>
 </div>
+<ngx-spinner></ngx-spinner>
 <router-outlet></router-outlet>
