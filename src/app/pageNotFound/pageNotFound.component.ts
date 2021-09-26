@@ -19,6 +19,7 @@ export class PageNotFoundComponent implements AfterViewInit {
     }
 
     backToOrderPage() {
+      this.ngEventBusWrapper.emitClearMessage();
       this.router.navigateByUrl("/");
     }
 

@@ -2,7 +2,7 @@ export class Order {
 	id: number = -1;
 	orderName: string = "";
 	price?: number = null as any;
-	discounted: boolean = false;
+	discounted: boolean = true;
 	isDiscountPercentage: number = 5.0;
 
 	clone():Order {
