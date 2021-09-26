@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-4">
             <div class = "menu">
-                <img class="fill-available" src = "../../assets/menu.png">
+                <img class="fill-available" src = "assets/menu.png">
             </div>
         </div>
         <div class="col-sm-8">
@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="row">
-                    <order-grid class="mt-5">
+                    <order-grid class="mt-5" [clerk]="clerk">
                         <order-input *ngFor="let order of orderList" [orderValue]="order"  (submit)="submitListener($event)" inputType="VIEW_ONLY"></order-input>
 
                         <div class="row text-center">

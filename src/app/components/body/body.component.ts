@@ -10,6 +10,7 @@ import { NgEventBusWrapper } from '../ngEventBusWrapper.component';
 })
 export class BodyComponent implements OnInit {
 
+    clerk : string = "";
     orderList : Order[] = [];
     totalRegularBill : number = 0;
     totalDiscountedBill : number = 0;
@@ -22,6 +23,10 @@ export class BodyComponent implements OnInit {
     }
 
     refreshList() : void {
+
+      this.bodyService.getClerk((data : any) => {
+        this.clerk = data.name;
+      });
 
       this.bodyService.getOrderList((data : any) => {
         this.orderList = data;

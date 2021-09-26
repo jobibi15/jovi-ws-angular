@@ -1,28 +1,28 @@
 <div class="row mt-5">
 	<div class="col-sm-3 center-items">
-		<input class="fit-width" *ngIf="!isViewOnly()" type="text" [(ngModel)]="orderValue.orderName" />
+		<input id="ordName" class="fit-width" *ngIf="!isViewOnly()" type="text" [(ngModel)]="orderValue.orderName" />
 		<span *ngIf="isViewOnly()">{{orderValue.orderName ? orderValue.orderName : "-"}}</span>
 	</div>
 	<div class="col-sm-3 center-items">
-		<input class="fit-width" *ngIf="!isViewOnly()" type="tel" [(ngModel)]="orderValue.price" />
+		<input id="ordPrice" class="fit-width" *ngIf="!isViewOnly()" type="tel" [(ngModel)]="orderValue.price" />
 		<span *ngIf="isViewOnly()">{{orderValue.price ? orderValue.price : "-"}}</span>
 	</div>
 	<div class="col-sm-3 center-items">
-		<input type="checkBox" [attr.disabled]="isViewOnly() ? true : null" [(ngModel)]="orderValue.discounted" />
+		<input id="ordDiscounted" type="checkBox" [attr.disabled]="isViewOnly() ? true : null" [(ngModel)]="orderValue.discounted" />
 	</div>
 	<div class="col-sm-3 center-items">
 		<div *ngIf="isAdd()">
-			<button (click) ="doSubmit()">Place Order</button>
+			<button id="addOrderBtn" (click) ="doSubmit()">Place Order</button>
 		</div>
 		<div *ngIf="isUpdate()">
-			<a (click)="doSubmit()">Update</a>
+			<a id="updOrd" (click)="doSubmit()">Update</a>
 			|
 			<a (click)="doCancel()">Cancel</a>
 		</div>
 		<div *ngIf="isViewOnly()">
-			<a (click)="enterUpdateMode()">Edit</a>
+			<a id="editOrd" (click)="enterUpdateMode()">Edit</a>
 			|
-			<a (click)="doSubmit(true)">Delete</a>
+			<a id="deleteOrd" (click)="doSubmit(true)">Delete</a>
 		</div>
 	</div>
 </div>

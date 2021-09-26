@@ -7,6 +7,10 @@ import { NgEventBusWrapper } from '../ngEventBusWrapper.component';
 })
 export class BodyService extends ApiService {
 
+  getClerk(responseCatcher = (response : any) => {}) {
+    this.doSubmitGet("getClerk", {}, responseCatcher);
+  }
+
   getOrderList(responseCatcher = (response : any) => {}) {
     this.doSubmitGet("getOrderList", {}, responseCatcher);
   }
@@ -16,7 +20,7 @@ export class BodyService extends ApiService {
   }
 
   getTotalDiscountedBill(responseCatcher = (response : any) => {}) {
-   return this.doSubmitGet("getTotalDiscountedBill");
+   return this.doSubmitGet("getTotalDiscountedBill", {}, responseCatcher);
   }
 
   addOrder(data : Object, responseCatcher = (response : any) => {}, errorCatcher = (response : any) => {}) {

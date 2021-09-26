@@ -1,16 +1,21 @@
-<div class="container fit-width">
+<div class="container fit-width table">
+	<div class="row" *ngIf="!!clerk">
+		<div class="col-sm-12 text-center">
+			<span>Attending Clerk: {{clerk}}</span>
+		</div>
+	</div>
 	<!--Header-->
 	<div class="row">
-		<div class="col-sm-3 text-center">
+		<div class="col-sm-3 text-center header">
 			<span>Order Item</span>
 		</div>
-		<div class="col-sm-3 text-center">
+		<div class="col-sm-3 text-center header">
 			<span>Price</span>
 		</div>
-		<div class="col-sm-3 text-center">
+		<div class="col-sm-3 text-center header">
 			<span>On 5% Promo?</span>
 		</div>
-		<div class="col-sm-3 text-center">
+		<div class="col-sm-3 text-center header">
 			<span>Action</span>
 		</div>
 	</div>

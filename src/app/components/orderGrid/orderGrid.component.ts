@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'order-grid',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./orderGrid.component.css']
 })
 export class OrderGridComponent implements OnInit {
+
+    @Input() clerk : string = "";
+
     ngOnInit(): void {
     }
 }
