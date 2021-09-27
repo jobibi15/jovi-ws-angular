@@ -1,14 +1,14 @@
 <div class="row mt-5">
 	<div class="col-sm-3 center-items">
-		<input id="ordName" class="fit-width" *ngIf="!isViewOnly()" type="text" [(ngModel)]="orderValue.orderName" />
+		<input [id]="isAdd() ? 'ordName' : 'updName'" class="fit-width" *ngIf="!isViewOnly()" type="text" [(ngModel)]="orderValue.orderName" />
 		<span *ngIf="isViewOnly()">{{orderValue.orderName ? orderValue.orderName : "-"}}</span>
 	</div>
 	<div class="col-sm-3 center-items">
-		<input id="ordPrice" class="fit-width" *ngIf="!isViewOnly()" type="tel" [(ngModel)]="orderValue.price" />
+		<input [id]="isAdd() ? 'ordPrice' : 'updPrice'" class="fit-width" *ngIf="!isViewOnly()" type="tel" [(ngModel)]="orderValue.price" />
 		<span *ngIf="isViewOnly()">{{orderValue.price ? orderValue.price : "-"}}</span>
 	</div>
 	<div class="col-sm-3 center-items">
-		<input id="ordDiscounted" type="checkBox" [attr.disabled]="isViewOnly() ? true : null" [(ngModel)]="orderValue.discounted" />
+		<input [id]="isAdd() ? 'ordDiscounted' : 'updDiscount'" type="checkBox" [attr.disabled]="isViewOnly() ? true : null" [(ngModel)]="orderValue.discounted" />
 	</div>
 	<div class="col-sm-3 center-items">
 		<div *ngIf="isAdd()">
